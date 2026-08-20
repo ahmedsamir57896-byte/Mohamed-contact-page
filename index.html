@@ -1,185 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mohamed Taha | BMCO</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mohamed Taha | BMCO Services</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
 
+        html,
         body {
             margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f3f5f7;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #222;
-            padding: 25px 15px;
+            padding: 0;
         }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px 15px;
+
+            background: #f3f5f7;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: #222;
+        }
+
+
+        /* =========================
+           MAIN CARD
+        ========================= */
 
         .card {
+
             width: 100%;
-            max-width: 575px;
+            max-width: 685px;
+
             background: #ffffff;
-            border-radius: 18px;
-            padding: 38px 30px;
+
+            border-radius: 20px;
+
+            padding: 45px 35px;
+
             text-align: center;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.08);
         }
 
-        .profile-img {
-            width: 158px;
-            height: 158px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 20%;
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .profile-wrap {
+
+            width: 185px;
+            height: 185px;
+
+            margin:
+                0 auto
+                42px auto;
+
             border: 4px solid #2468e5;
-            margin-bottom: 30px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            background: #ffffff;
+
+            position: relative;
         }
+
+
+        .profile-wrap img {
+
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            /*
+            Horizontal / Vertical
+            Face positioning
+            */
+            object-position: 50% 20%;
+
+            /*
+            Slight zoom so the
+            head and shoulders
+            fill the circle
+            */
+            transform: scale(1.16);
+
+            transform-origin: center center;
+        }
+
+
+        /* =========================
+           NAME / JOB TITLE
+        ========================= */
 
         h1 {
-            font-size: 28px;
-            margin: 0 0 20px;
-            color: #111;
-            line-height: 1.3;
+
+            margin:
+                0 0 24px 0;
+
+            font-size: 31px;
+
+            line-height: 1.25;
+
+            font-weight: 700;
+
+            color: #111111;
         }
+
+
+        /* =========================
+           COMPANY
+        ========================= */
 
         .company {
-            font-size: 21px;
-            font-weight: bold;
-            color: #4a4f59;
-            margin-bottom: 28px;
+
+            margin-bottom: 32px;
+
+            font-size: 23px;
+
+            line-height: 1.4;
+
+            font-weight: 700;
+
+            color: #484d56;
         }
+
+
+        /* =========================
+           CONTACT INFORMATION
+        ========================= */
 
         .contact {
-            font-size: 18px;
+
+            font-size: 20px;
+
             line-height: 2;
+
+            text-align: center;
         }
 
-        .contact a {
-            color: #26364c;
-            text-decoration: none;
-            font-weight: bold;
+
+        .contact-row {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
         }
 
-        .contact a:hover {
-            color: #2468e5;
-        }
 
         .icon {
-            display: inline-block;
-            width: 26px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 28px;
         }
+
+
+        .contact a {
+
+            color: #26364c;
+
+            text-decoration: none;
+
+            font-weight: 700;
+        }
+
+
+        .contact a:hover {
+
+            color: #2468e5;
+        }
+
+
+        .location {
+
+            font-weight: 700;
+
+            color: #222222;
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
 
         .whatsapp {
-            margin-top: 25px;
+
+            margin-top: 28px;
         }
 
+
         .whatsapp a {
-            font-size: 22px;
-            font-weight: bold;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 25px;
+
+            font-weight: 700;
+
             color: #2468e5;
+
             text-decoration: none;
         }
 
+
         .whatsapp a:hover {
+
             opacity: 0.8;
         }
 
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
-            margin-top: 35px;
-            font-size: 14px;
+
+            margin-top: 42px;
+
+            font-size: 16px;
+
             color: #9aa0aa;
         }
 
-        @media (max-width: 480px) {
-            .card {
-                padding: 32px 18px;
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding: 18px 12px;
             }
+
+
+            .card {
+
+                padding:
+                    35px 18px;
+
+                border-radius: 18px;
+            }
+
+
+            .profile-wrap {
+
+                width: 160px;
+                height: 160px;
+
+                margin-bottom: 32px;
+            }
+
+
+            .profile-wrap img {
+
+                object-position: 50% 20%;
+
+                transform: scale(1.16);
+            }
+
 
             h1 {
-                font-size: 23px;
+
+                font-size: 24px;
+
+                margin-bottom: 20px;
             }
+
 
             .company {
-                font-size: 18px;
+
+                font-size: 19px;
+
+                margin-bottom: 25px;
             }
+
 
             .contact {
+
                 font-size: 16px;
+
+                line-height: 1.9;
             }
 
-            .profile-img {
-    width: 165px;
-    height: 165px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 18%;
-    border: 4px solid #2468e5;
-    display: block;
-    margin: 0 auto 30px auto;
-}
+
+            .whatsapp a {
+
+                font-size: 21px;
+            }
+
+
+            footer {
+
+                font-size: 14px;
+
+                margin-top: 35px;
+            }
+
+        }
+
+
+        /* Extra small phones */
+
+        @media (max-width: 390px) {
+
+            .profile-wrap {
+
+                width: 150px;
+                height: 150px;
+            }
+
+
+            h1 {
+
+                font-size: 22px;
+            }
+
+
+            .company {
+
+                font-size: 17px;
+            }
+
+
+            .contact {
+
+                font-size: 15px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-<div class="card">
 
-    <img src="./profile.jpg.jpg?v=5" alt="Mohamed Taha" class="profile-img">
+    <div class="card">
 
-    <h1>Sales Officer Mohamed Taha</h1>
 
-    <div class="company">
-        BMCO Services - Riyadh, Saudi Arabia
-    </div>
+        <!-- PROFILE IMAGE -->
 
-    <div class="contact">
+        <div class="profile-wrap">
 
-        <div>
-            <span class="icon">📞</span>
-            Phone:
-            <a href="tel:+966563534021">
-                0563534021
+            <img
+                src="./profile.jpg.jpg?v=20"
+                alt="Mohamed Taha">
+
+        </div>
+
+
+
+        <!-- NAME + JOB TITLE -->
+
+        <h1>
+            Sales Officer Mohamed Taha
+        </h1>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="company">
+
+            BMCO Services - Riyadh, Saudi Arabia
+
+        </div>
+
+
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact">
+
+
+            <!-- PHONE -->
+
+            <div class="contact-row">
+
+                <span class="icon">
+                    📞
+                </span>
+
+                <span>
+                    Phone:
+                </span>
+
+                <a href="tel:+966563534021">
+
+                    0563534021
+
+                </a>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-row">
+
+                <span class="icon">
+                    📧
+                </span>
+
+                <span>
+                    Email:
+                </span>
+
+                <a href="mailto:mohamed.taha@bmco-fm.com">
+
+                    mohamed.taha@bmco-fm.com
+
+                </a>
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="contact-row">
+
+                <span class="icon">
+                    📍
+                </span>
+
+                <span>
+                    Location:
+                </span>
+
+                <span class="location">
+
+                    Al Malaz, University Street, Riyadh, KSA
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- WHATSAPP -->
+
+        <div class="whatsapp">
+
+            <a
+                href="https://wa.me/966563534021"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span>
+                    💬
+                </span>
+
+                WhatsApp Me
+
             </a>
+
         </div>
 
-        <div>
-            <span class="icon">📧</span>
-            Email:
-            <a href="mailto:mohamed.taha@bmco-fm.com">
-                mohamed.taha@bmco-fm.com
-            </a>
-        </div>
 
-        <div>
-            <span class="icon">📍</span>
-            Location:
-            <strong>Al Malaz, University Street, Riyadh, KSA</strong>
-        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026 BMCO | All rights reserved
+
+        </footer>
+
 
     </div>
 
-    <div class="whatsapp">
-        💬
-        <a
-        href="https://wa.me/966563534021"
-        target="_blank">
-            WhatsApp Me
-        </a>
-    </div>
-
-    <footer>
-        © 2026 BMCO | All rights reserved
-    </footer>
-
-</div>
 
 </body>
+
 </html>
